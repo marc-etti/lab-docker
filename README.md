@@ -1,8 +1,8 @@
 # Laboratorio Docker
 
 ## Prerequisiti
-- Docker installato e funzionante, controllare con `docker --version`. Per installare Docker, seguire le istruzioni ufficiali: https://docs.docker.com/engine/install
-- Estensione `Containers` di Visual Studio Code installata e configurata (opzionale ma consigliata).
+- Docker installato e funzionante, controllare con `docker --version`. Per installare Docker, seguire le [istruzioni ufficiali](https://docs.docker.com/engine/install).
+- Estensione `Containers` di Visual Studio Code installata e configurata (opzionale ma consigliata). [Overview](https://code.visualstudio.com/docs/containers/overview).
 
 ## Indice dei laboratori
 - [Laboratorio Docker 00](Lab-00/README.md) - Esecuzione di un container Ubuntu
