@@ -11,3 +11,6 @@
 - [Laboratorio Docker 03](Lab-03/README.md) - Gestione di più container con Docker Compose
 - [Laboratorio Docker 04](Lab-04/README.md) - RabbbitMQ: messaggistica e code di messaggi
 - [Laboratorio Docker 05](Lab-05/README.md) - 
+
+---
+- [Dockerfile cheat sheet](dockerfile_cheatsheet.md)
