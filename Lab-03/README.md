@@ -35,6 +35,17 @@ In questo laboratorio, vedremo come gestire più container utilizzando Docker Co
         - `ports` mappa la porta 8000 del container alla porta 8000 del host, permettendo di accedere all'applicazione tramite `http://localhost:8000`.
         - `environment` definisce le variabili d'ambiente necessarie per la connessione al database, che saranno lette dal file `.env`.
         - `depends_on` specifica che il servizio `web` dipende da `mariadb`, quindi Docker Compose si assicurerà che `mariadb` sia avviato prima di `web`.
+        ```dockerfile
+        FROM php:8.3-cli
+
+        WORKDIR /app
+
+        RUN docker-php-ext-install mysqli
+
+        COPY index.php .
+
+        CMD ["php", "-S", "0.0.0.0:8000"]
+        ```
 
     - `mariadb`, che rappresenta il database MariaDB. 
         - `image: mariadb` indica che questo servizio utilizza l'immagine ufficiale di MariaDB.
