@@ -10,8 +10,8 @@ In questo laboratorio, riprenderemo RabbitMQ, un sistema di messaggistica open s
         - "5672:5672"  # Porta per AMQP
         - "15672:15672"  # Porta per l'interfaccia di gestione
         environment:
-        - RABBITMQ_DEFAULT_USER={{RABBITMQ_DEFAULT_USER:-guest}}
-        - RABBITMQ_DEFAULT_PASS={{RABBITMQ_DEFAULT_PASS:-guest}}
+        - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-guest}
+        - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-guest}
         volumes:
         - rabbitmq_data:/var/lib/rabbitmq
     volumes:
