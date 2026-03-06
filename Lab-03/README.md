@@ -4,29 +4,29 @@ In questo laboratorio, vedremo come gestire più container utilizzando Docker Co
 1. Creare un file chiamato `docker-compose.yml` con il seguente contenuto:
     ```yaml
     services:
-    web:
-        build: resources/app/
-        ports:
-        - 8000:8000
-        environment:
-        - DB_HOST=mariadb
-        - DB_USERNAME=${DB_USERNAME}
-        - DB_PASSWORD=${DB_PASSWORD}
-        - DB_NAME=${DB_NAME}
-        depends_on:
-        - mariadb
-    
-    mariadb:
-        image: mariadb
-        environment:
-        - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
-        - DB_USERNAME=${DB_USERNAME}
-        - DB_PASSWORD=${DB_PASSWORD}
-        - DB_NAME=${DB_NAME}
+        web:
+            build: resources/app/
+            ports:
+            - 8000:8000
+            environment:
+            - DB_HOST=mariadb
+            - DB_USERNAME=${DB_USERNAME}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - DB_NAME=${DB_NAME}
+            depends_on:
+            - mariadb
+        
+        mariadb:
+            image: mariadb
+            environment:
+            - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+            - DB_USERNAME=${DB_USERNAME}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - DB_NAME=${DB_NAME}
 
-        volumes:
-        - ./resources/mariadb/init-db.sql.template:/tmp/init-db.sql.template
-        - ./resources/mariadb/subst-vars.sh:/docker-entrypoint-initdb.d/00-subst-vars.sh
+            volumes:
+            - ./resources/mariadb/init-db.sql.template:/tmp/init-db.sql.template
+            - ./resources/mariadb/subst-vars.sh:/docker-entrypoint-initdb.d/00-subst-vars.sh
     ```
     In questo file, definiamo due servizi (`services`):
 
