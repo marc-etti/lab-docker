@@ -62,7 +62,7 @@ In questo laboratorio, vedremo come utilizzare docker come ambiente di sviluppo 
     </html>
     ```
 
-4. Avvio del container con `docker-compose up --build` e accesso a `http://localhost:8080` per vedere il risultato.
+4. Avvio del container con `docker compose up --build` e accesso a `http://localhost:8080` per vedere il risultato.
 
 5. Modificando il file `index.php` nella cartella `src`, le modifiche saranno immediatamente visibili nel container. Basta salvare il file e ricaricare la pagina nel browser per vedere le modifiche.
 
