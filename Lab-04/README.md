@@ -33,7 +33,7 @@ In questo laboratorio, riprenderemo RabbitMQ, un sistema di messaggistica open s
 
 3. Avvio del container:
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 4. Accesso all'interfaccia di gestione:
