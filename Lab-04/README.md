@@ -4,18 +4,18 @@ In questo laboratorio, riprenderemo RabbitMQ, un sistema di messaggistica open s
 1. Creazione del file `docker-compose.yml`:
     ```yaml
     services:
-    rabbitmq:
-        image: rabbitmq:3-management
-        ports:
-        - "5672:5672"  # Porta per AMQP
-        - "15672:15672"  # Porta per l'interfaccia di gestione
-        environment:
-        - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-guest}
-        - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-guest}
-        volumes:
-        - rabbitmq_data:/var/lib/rabbitmq
+        rabbitmq:
+            image: rabbitmq:3-management
+            ports:
+            - "5672:5672"  # Porta per AMQP
+            - "15672:15672"  # Porta per l'interfaccia di gestione
+            environment:
+            - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-guest}
+            - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-guest}
+            volumes:
+            - rabbitmq_data:/var/lib/rabbitmq
     volumes:
-    rabbitmq_data:
+        rabbitmq_data:
     ```
     dove:
     - `image: rabbitmq:3-management` specifica l'immagine ufficiale di RabbitMQ con il plugin di gestione abilitato.
